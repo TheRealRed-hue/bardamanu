@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Calendar, Clock, Music, ArrowRight } from "lucide-react"
+import { Calendar, Clock, Music, ArrowRight, Instagram } from "lucide-react"
 import Image from "next/image"
 
 const events = [
@@ -11,7 +11,7 @@ const events = [
     date: "Sexta, 24 Jan",
     time: "22:00h",
     description: "Uma noite de house e eletrônica com DJ Alex comandando as pickups.",
-    image: "https://images.unsplash.com/photo-1571266028243-3c67e8c78e41?q=80&w=800&auto=format&fit=crop",
+    image: "https://plus.unsplash.com/premium_photo-1683136824868-a182b5c18e67?q=80&w=800&auto=format&fit=crop",
     featured: true,
     genre: "House / Eletrônica",
   },
@@ -149,14 +149,17 @@ export function EventsSection() {
                     </p>
                   </div>
 
-                  <button
+                  <a
+                    href="https://instagram.com/bar.damanu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Ver detalhes de ${event.title} no Instagram`}
                     className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-accent transition-colors group/btn"
-                    aria-label={`Ver detalhes de ${event.title}`}
                   >
-                    <Music className="w-3.5 h-3.5" aria-hidden="true" />
+                    <Instagram className="w-3.5 h-3.5" aria-hidden="true" />
                     <span>Ver detalhes</span>
                     <ArrowRight className="w-3.5 h-3.5 -translate-x-1 opacity-0 group-hover/btn:translate-x-0 group-hover/btn:opacity-100 transition-all duration-200" aria-hidden="true" />
-                  </button>
+                  </a>
                 </div>
               </div>
             </motion.article>

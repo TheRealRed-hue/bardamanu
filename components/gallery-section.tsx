@@ -29,7 +29,7 @@ const galleryImages = [
   },
   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1571266028243-3c67e8c78e41?q=80&w=800&auto=format&fit=crop",
+    src: "https://plus.unsplash.com/premium_photo-1683136824868-a182b5c18e67?q=80&w=800&auto=format&fit=crop",
     alt: "DJ tocando na festa",
     span: "col-span-1 row-span-2",
     mobileSpan: "col-span-1 row-span-1",

@@ -5,9 +5,8 @@ import Link from "next/link"
 import { Instagram, Facebook, Music2, Heart, ArrowUp } from "lucide-react"
 
 const socialLinks = [
-  { icon: Instagram, href: "https://instagram.com/bardamanu",  label: "Instagram" },
-  { icon: Facebook,  href: "https://facebook.com/bardamanu",   label: "Facebook"  },
-  { icon: Music2,    href: "https://tiktok.com/@bardamanu",    label: "TikTok"    },
+  { icon: Instagram, href: "https://instagram.com/bar.damanu",  label: "Instagram" },
+  { icon: Music2,    href: "https://tiktok.com/@bar.damanu",    label: "TikTok"    },
 ]
 
 const footerLinks = [
@@ -122,10 +121,10 @@ export function Footer() {
         {/* Bottom */}
         <div className="pt-6 border-t border-border/20 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-foreground/35 text-xs">
-            &copy; {currentYear} Bar da Manu. Todos os direitos reservados.
+            &copy; {currentYear} Bar da Manu. Todos os direitos reservados pela Equipe KZR Studios.
           </p>
           <p className="text-foreground/35 text-xs flex items-center gap-1">
-            Feito com <Heart className="w-3.5 h-3.5 text-primary fill-primary" aria-label="amor" /> no Brasil
+            Feito com <Heart className="w-3.5 h-3.5 text-primary fill-primary" aria-label="amor" /> no Brasil, pela equipe KZR.
           </p>
         </div>
       </div>

@@ -41,7 +41,7 @@ const drinks = [
     id: 5,
     name: "Midnight Rose",
     description: "Espumante rosé, licor de rosas, morango e hortelã",
-    image: "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=800&auto=format&fit=crop",,
+    image: "https://images.unsplash.com/photo-1604321115296-f4b73745c7d9?q=80&w=800&auto=format&fit=crop",
     category: "Especial da Casa",
     tag: "Casa",
   },

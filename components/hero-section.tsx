@@ -69,8 +69,8 @@ export function HeroSection() {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="mb-6"
         >
-          <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full glassmorphism text-sm text-accent font-medium tracking-widest uppercase">
-            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+          <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full glassmorphism text-sm text-glow-gold font-medium tracking-widest uppercase" style={{ color: "oklch(0.83 0.16 88)" }}>
+            <span className="w-1.5 h-1.5 rounded-full bg-yellow-400 animate-pulse" />
             Premium Nightlife Experience
           </span>
         </motion.div>
