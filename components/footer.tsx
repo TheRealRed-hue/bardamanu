@@ -121,7 +121,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="pt-6 border-t border-border/20 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-foreground/35 text-xs">
-            &copy; {currentYear} Bar da Manu. Todos os direitos reservados pela Equipe KZR Studios.
+            &copy; {currentYear} Bar da Manu! Todos os direitos reservados pela Equipe KZR Studios.
           </p>
           <p className="text-foreground/35 text-xs flex items-center gap-1">
             Feito com <Heart className="w-3.5 h-3.5 text-primary fill-primary" aria-label="amor" /> no Brasil, pela equipe KZR.
