@@ -23,7 +23,7 @@ export function HeroSection() {
       {/* Parallax background */}
       <motion.div
         className="absolute inset-0 z-0"
-        style={{ y: bgY }}
+        style={{ y: bgY, willChange: "transform" }}
       >
         <div
           className="absolute inset-[-10%] bg-cover bg-center bg-no-repeat"
@@ -31,35 +31,30 @@ export function HeroSection() {
             backgroundImage: `url('https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?q=80&w=2029&auto=format&fit=crop')`,
           }}
         />
-        {/* Multi-layer gradient for cinematic depth */}
         <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/55 to-background" />
         <div className="absolute inset-0 bg-gradient-to-r from-background/60 via-transparent to-background/40" />
         <div className="absolute inset-0 bg-gradient-to-t from-neon-purple/15 via-transparent to-neon-pink/10" />
       </motion.div>
 
-      {/* Animated atmospheric orbs */}
-      <motion.div
-        className="absolute top-1/4 left-[15%] w-[500px] h-[500px] rounded-full blur-[80px] pointer-events-none"
-        style={{ background: "radial-gradient(circle, oklch(0.68 0.26 335 / 0.22), transparent)" }}
-        animate={{ scale: [1, 1.15, 1], opacity: [0.4, 0.65, 0.4] }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="absolute bottom-1/4 right-[10%] w-[400px] h-[400px] rounded-full blur-[70px] pointer-events-none"
-        style={{ background: "radial-gradient(circle, oklch(0.52 0.22 285 / 0.22), transparent)" }}
-        animate={{ scale: [1.15, 1, 1.15], opacity: [0.5, 0.3, 0.5] }}
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full blur-[60px] pointer-events-none"
-        style={{ background: "radial-gradient(circle, oklch(0.83 0.16 88 / 0.08), transparent)" }}
-        animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.4, 0.2] }}
-        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-      />
+      {/* Atmospheric orbs — CSS-only, GPU-composited */}
+      <style>{`
+        @keyframes orb-pulse-1 { 0%,100%{opacity:.4;transform:scale(1)} 50%{opacity:.65;transform:scale(1.12)} }
+        @keyframes orb-pulse-2 { 0%,100%{opacity:.5;transform:scale(1.12)} 50%{opacity:.3;transform:scale(1)} }
+        @keyframes orb-pulse-3 { 0%,100%{opacity:.2;transform:scale(1)} 50%{opacity:.4;transform:scale(1.25)} }
+        .orb1 { animation: orb-pulse-1 5s ease-in-out infinite; will-change: transform,opacity; }
+        .orb2 { animation: orb-pulse-2 6s ease-in-out infinite; will-change: transform,opacity; }
+        .orb3 { animation: orb-pulse-3 7s ease-in-out infinite; will-change: transform,opacity; }
+      `}</style>
+      <div className="orb1 absolute top-1/4 left-[15%] w-[500px] h-[500px] rounded-full blur-[80px] pointer-events-none"
+        style={{ background: "radial-gradient(circle, oklch(0.68 0.26 335 / 0.22), transparent)" }} />
+      <div className="orb2 absolute bottom-1/4 right-[10%] w-[400px] h-[400px] rounded-full blur-[70px] pointer-events-none"
+        style={{ background: "radial-gradient(circle, oklch(0.52 0.22 285 / 0.22), transparent)" }} />
+      <div className="orb3 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full blur-[60px] pointer-events-none"
+        style={{ background: "radial-gradient(circle, oklch(0.83 0.16 88 / 0.08), transparent)" }} />
 
       {/* Main content — parallax wrapper */}
       <motion.div
-        style={{ y: textY, opacity }}
+        style={{ y: textY, opacity, willChange: "transform,opacity" }}
         className="relative z-10 container mx-auto px-5 sm:px-6 text-center"
       >
         {/* Eyebrow label */}
